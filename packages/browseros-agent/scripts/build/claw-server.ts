@@ -2,9 +2,9 @@
 
 import { runProdResourceBuild } from '@browseros/build-server-tools'
 
-import { browserosServerBuildProduct } from './server/descriptor'
+import { clawServerBuildProduct } from './claw-server/descriptor'
 
-runProdResourceBuild(browserosServerBuildProduct, process.argv.slice(2)).catch(
+runProdResourceBuild(clawServerBuildProduct, process.argv.slice(2)).catch(
   (error) => {
     const message = error instanceof Error ? error.message : String(error)
     console.error(`\n✗ ${message}\n`)
